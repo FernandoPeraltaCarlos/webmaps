@@ -1,6 +1,13 @@
 ---
+//! Layouts
 import Base from '../layouts/Base.astro'
+import Home from '../layouts/Home/Home.astro';
+
+//! Componentes
+import Nav from '../components/Home/Nav/Nav.astro'
 ---
 <Base title="Home">
-	<h1>Hola mundo</h1>
+	<Home>
+		<Nav />
+	</Home>
 </Base>

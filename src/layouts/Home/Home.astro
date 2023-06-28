@@ -1,0 +1,14 @@
+<main class="main">
+    <slot />
+</main>
+<style lang="scss">
+    .main{
+        padding: 0 clamp(4em,10vw,10em);
+        @media (max-width:1000px){
+            padding: 0 clamp(2em,8vw,6em);
+        }
+        @media (max-width:500px){
+            padding: 0 clamp(.8em,6vw,1.5em);
+        }
+    }
+</style>

@@ -1,0 +1,70 @@
+---
+//! style
+
+import style from './style.module.scss'
+
+const menu = [
+    {
+        name:"Home",
+        url:"#"
+    },
+    {
+        name:"Products",
+        url:"#"
+    },
+    {
+        name:"Resources",
+        url:"#",
+        icon:"/public/imgs/Home/Nav/arrowIcon.svg"
+    },
+    {
+        name:"Pricing",
+        url:"#",
+        icon:"/public/imgs/Home/Nav/arrowIcon.svg"
+    }
+]
+
+const btns = [
+    {
+        name:"Log in",
+        url:"#"
+    },
+    {
+        name:"Sign up",
+        url:"#"
+    }
+]
+---
+
+<nav class={style.nav}>
+    <div class={style.nav_container}>
+        <figure class="logo">
+            <img src="/public/imgs/Home/Nav/LogoDesktop.png" alt="">
+        </figure>
+        <ul class={style.menu}>
+            {
+                menu.map(element => {
+                    if(element.icon){
+                        return (
+                            <li>
+                                <a href={element.url}>
+                                    {element.name}
+                                    <img src={element.icon} alt={element.name}>
+                                </a>
+                            </li>
+                        )
+                    }else{
+                        return <li><a href={element.url}>{element.name}</a></li>
+                    }
+                })
+            }
+        </ul>
+    </div>
+    <div class={style.btn_group}>
+        {
+            btns.map(btn=>(
+                <a href={btn.url}>{btn.name}</a>
+            ))
+        }
+    </div>
+</nav>
