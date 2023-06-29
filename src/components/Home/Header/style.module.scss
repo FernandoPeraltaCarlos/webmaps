@@ -1,0 +1,86 @@
+@import "../../../styles/colors.modules.scss";
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    & > section {
+        width: 50%;
+    }
+    & > section:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        row-gap: 1.5rem;
+        h1 {
+            font-size: clamp(2.25rem, 4vw, 3.75rem);
+            line-height: 1em * 1.2;
+            color: $black;
+        }
+        p {
+            color: $gray;
+            font-size: clamp(1.125rem, 3vw, 1.25rem);
+            font-weight: 400;
+            line-height: 1em * 1.5;
+        }
+    }
+}
+
+.rating {
+    display: grid;
+    grid-template-areas:
+        "div1 div2"
+        "div1 div3";
+    justify-content: flex-start;
+    column-gap: 2rem;
+    & > div {
+        &:nth-of-type(1) {
+            grid-area: div1;
+        }
+        &:nth-of-type(2) {
+            grid-area: div2;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 0.6em;
+        }
+        &:nth-of-type(3) {
+            grid-area: div3;
+        }
+    }
+}
+
+.btn_group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1em;
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        padding: 0.625rem 1.125rem;
+        &:has(> img) {
+            column-gap: 0.5em;
+        }
+        &:first-of-type {
+            background-color: $white;
+            color: $black;
+            border: 1px solid $gray2;
+        }
+        &:last-of-type {
+            background-color: $blue;
+            color: $white;
+            border: 1px solid $blue;
+            &:hover {
+                background-color: $darkblue;
+                border: 1px solid $darkblue;
+            }
+        }
+    }
+}

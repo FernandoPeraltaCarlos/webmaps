@@ -1,0 +1,58 @@
+---
+import style from './style.module.scss'
+
+const btns = [
+    {
+        name:"Demo",
+        url:"#",
+        icon:"/public/imgs/Home/Header/iconBtn.svg"
+    },
+    {
+        name:"Get started",
+        url:"#",
+    }
+]
+---
+<header class={style.header}>
+    <section>
+        <h1>Zero Hassle Push to Talk conversations</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class={style.btn_group}>
+            {
+                btns.map(btn=>{
+                    if(btn.icon){
+                        return(
+                            <a href={btn.url}>
+                                <img src={btn.icon} alt={btn.name}>
+                                {btn.name}
+                            </a>
+                        )
+                    }else{
+                        return <a href={btn.url}>{btn.name}</a>
+                    }
+                })
+            }
+        </div>
+        <div class={style.rating}>
+            <div>
+                <figure>
+                    <img src="/public/imgs/Home/Header/Avatars.png" alt="avatars">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="/public/imgs/Home/Header/Stars.png" alt="stars" />
+                </figure>
+                <p>5.0</p>
+            </div>
+            <div>
+                <p>from 200+ reviews</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <figure>
+            <img class={style.img_desktop} src="/public/imgs/Home/Header/image.png" alt="movil">
+        </figure>
+    </section>
+</header>

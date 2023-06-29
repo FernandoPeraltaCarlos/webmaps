@@ -1,13 +1,15 @@
 ---
 //! Layouts
-import Base from '../layouts/Base.astro'
+import Base from '../layouts/Base.astro';
 import Home from '../layouts/Home/Home.astro';
 
 //! Componentes
-import Nav from '../components/Home/Nav/Nav.astro'
+import Nav from '../components/Home/Nav/Nav.astro';
+import Header from '../components/Home/Header/Header.astro';
 ---
 <Base title="Home">
 	<Home>
 		<Nav />
+		<Header />
 	</Home>
 </Base>
