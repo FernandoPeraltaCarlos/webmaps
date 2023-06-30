@@ -2,16 +2,18 @@
 //! Layouts
 import Base from '../layouts/Base.astro';
 import Home from '../layouts/Home/Home.astro';
-import Information from '../components/Home/Information/Information.astro';
 
 //! Componentes
 import Nav from '../components/Home/Nav/Nav.astro';
 import Header from '../components/Home/Header/Header.astro';
+import Information from '../components/Home/Information/Information.astro';
+import Reviews from '../components/Home/Reviews/Reviews'
 ---
 <Base title="Home">
 	<Home>
 		<Nav />
 		<Header />
 		<Information />
+		<Reviews client:only="react" />
 	</Home>
 </Base>

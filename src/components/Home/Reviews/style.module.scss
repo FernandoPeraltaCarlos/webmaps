@@ -1,0 +1,73 @@
+@import "../../../styles/colors.modules.scss";
+
+.reviews {
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > section {
+        width: 50%;
+    }
+}
+
+.review {
+    display: grid;
+    min-width: 50%;
+    row-gap: 3rem;
+    grid-template-areas:
+        "div1 div1 di1"
+        "div2 div2 div2"
+        "div3 div3 div4";
+}
+
+.rating {
+    grid-area: div1;
+}
+
+.reviewText {
+    grid-area: div2;
+    h4 {
+        font-size: clamp(2rem, 5vw, 3.75rem);
+        font-weight: 500;
+        line-height: clamp(2rem, 5vw, 3.75rem);
+        color: $black;
+    }
+}
+
+.avatar {
+    grid-area: div3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 0.25rem;
+        h5 {
+            font-size: clamp(1rem, 5vw, 1.125rem);
+            font-weight: 500;
+            color: $black;
+        }
+        p {
+            font-size: clamp(0.8rem, 5vw, 1rem);
+            font-weight: 400;
+            color: $gray;
+        }
+    }
+}
+
+.arrows {
+    grid-area: div4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.8em;
+    figure {
+        border-radius: 50%;
+        border: 1px solid $gray2;
+        padding: 0.5em;
+    }
+}
