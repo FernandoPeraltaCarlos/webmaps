@@ -1,0 +1,56 @@
+@import "../../../styles/colors.modules.scss";
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6em 0;
+    row-gap: 4em;
+    & > section {
+        &:first-of-type {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1.25em;
+            h2 {
+                color: $black;
+                font-weight: 600;
+                font-size: clamp(2rem, 5vw, 2.6rem);
+            }
+            p {
+                color: $gray;
+                font-weight: 400;
+                font-size: clamp(1rem, 5vw, 1.875rem);
+            }
+        }
+        &:last-of-type {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $gray3;
+            padding: 4em;
+            border-radius: 16px;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 0.75em;
+                h3 {
+                    color: $blue2;
+                    font-weight: 600;
+                    font-size: clamp(2.5rem, 5vw, 3.75rem);
+                }
+                p {
+                    color: $black;
+                    font-size: clamp(1rem, 5vw, 1.125rem);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
