@@ -1,0 +1,90 @@
+@import "../../../styles/colors.modules.scss";
+
+.questions {
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+    h5 {
+        font-size: clamp(1.8rem, 5vw, 2.25rem);
+        color: $black;
+        font-weight: 600;
+    }
+    p {
+        font-size: (1rem, 5vw, 1.25rem);
+        font-weight: 400;
+        color: $gray;
+    }
+}
+
+.asked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    row-gap: 1.25rem;
+}
+
+.q {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h5 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+        width: 100%;
+        font-size: clamp(1rem, 5vw, 1.125rem);
+        color: $black;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.getTouch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    h5 {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        font-weight: 500;
+        color: $black;
+    }
+    p {
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        font-weight: 400;
+        color: $gray;
+    }
+    a {
+        border-radius: 8px;
+        background-color: $blue;
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        padding: 0.625rem 1.125rem;
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            background-color: $darkblue;
+        }
+    }
+}

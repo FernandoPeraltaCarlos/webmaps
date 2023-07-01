@@ -1,4 +1,8 @@
-<main class="main">
+---
+let {bg} = Astro.props;
+---
+
+<main class="main" style=`background-color: ${bg};`>
     <slot />
 </main>
 <style lang="scss">

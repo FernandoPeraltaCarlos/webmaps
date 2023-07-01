@@ -7,7 +7,8 @@ import Home from '../layouts/Home/Home.astro';
 import Nav from '../components/Home/Nav/Nav.astro';
 import Header from '../components/Home/Header/Header.astro';
 import Information from '../components/Home/Information/Information.astro';
-import Reviews from '../components/Home/Reviews/Reviews'
+import Reviews from '../components/Home/Reviews/Reviews';
+import Questions from '../components/Home/Questions/Questions';
 ---
 <Base title="Home">
 	<Home>
@@ -15,5 +16,8 @@ import Reviews from '../components/Home/Reviews/Reviews'
 		<Header />
 		<Information />
 		<Reviews client:only="react" />
+	</Home>
+	<Home bg="#f9fafb">
+		<Questions client:only="react" />
 	</Home>
 </Base>
