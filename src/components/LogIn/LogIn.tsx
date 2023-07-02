@@ -6,7 +6,7 @@ const users = [
     {
         id:"1",
         user:"example1@example.com",
-        pass:"password1",
+        pass:"password2",
         icon:"#"
     },
     {
@@ -17,7 +17,7 @@ const users = [
     },
 ]
 
-type V = "39D25C20D2DB7519BFA1235F3F1A24F7" | boolean;
+
 type AlertProps = {
     isVisible: boolean;
 }
@@ -31,24 +31,14 @@ const Alert = styled.span<AlertProps>`
 
 function Form(){
     const [data, setData] = useState(users);
-    const [value, setValue] = useState<V>("39D25C20D2DB7519BFA1235F3F1A24F7");
     const [alert, setAlert] = useState(false);
-    const [session , setSession] = useState([{user:"",icon:""}])
+    const [value, setValue] = useState(false);
     const user = useRef<HTMLInputElement>(null);
     const pass = useRef<HTMLInputElement>(null);
 
     useEffect(()=>{
-        if(value === "39D25C20D2DB7519BFA1235F3F1A24F7"){
-            setAlert(false)
-        }else if(value){
-            setAlert(false)
+        if(value){
             console.log("exito")
-            sessionStorage.setItem('key',"39D25C20D2DB7519BFA1235F3F1A24F7");
-            sessionStorage.setItem('user',JSON.stringify(session));
-        }else{
-            setAlert(true)
-            user.current.value = "";
-            pass.current.value = ""
         }
     },[value])
 
@@ -56,10 +46,18 @@ function Form(){
         const $user:string = user.current.value ? user.current.value : "";
         const $pass:string = pass.current.value ? pass.current.value : "";
         e.preventDefault();
-        const isValid = data.some(element => element.user === $user && element.pass === $pass);
-        const $icon = data.find(element => element.user === $user && element.pass === $pass)?.icon;
-        setSession([{user:$user,icon:$icon[0]}])
-        setValue(isValid)
+        const isValid:boolean = data.some(element => element.user === $user && element.pass === $pass);
+        if(isValid){
+            const $icon = data.find(element => element.user === $user && element.pass === $pass)?.icon;
+            sessionStorage.setItem('key',"39D25C20D2DB7519BFA1235F3F1A24F7");
+            sessionStorage.setItem('user', JSON.stringify({ user: $user, icon: $icon }));
+            setValue(isValid);
+            setAlert(!isValid);
+        }else{
+            user.current.value = "";
+            pass.current.value = ""
+            setAlert(!isValid);
+        }
     }
 
     return(
