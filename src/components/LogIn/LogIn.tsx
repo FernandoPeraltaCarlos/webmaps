@@ -90,7 +90,7 @@ function LogIn (){
         <main className={style.container}>
             <section className={style.form_container}>
                 <figure className={style.form_icon}>
-                    <img src="/public/imgs/log-in/icon.png" alt="icon" />
+                    <img src="/imgs/log-in/icon.png" alt="icon" />
                 </figure>
                 <div className={style.form_title}>
                     <h1>Welcome back</h1>

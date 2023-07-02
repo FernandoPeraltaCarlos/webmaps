@@ -7,43 +7,43 @@ import style from './style.module.scss';
 const data = [
     {
         id:1,
-        rating:"/public/imgs/Home/reviews/Stars.png",
+        rating:"/imgs/Home/reviews/Stars.png",
         name:"Katherine Moss",
         ocupation:"Project Manager, Layers",
         review: "We’ve really sped up our workflow with Company  and haven’t looked back.",
-        avatar:"/public/imgs/Home/reviews/Avatar1.png"
+        avatar:"/imgs/Home/reviews/Avatar1.png"
     },
     {
         id: 2,
-        rating:"/public/imgs/Home/reviews/Stars.png",
+        rating:"/imgs/Home/reviews/Stars.png",
         name: "John Doe",
         ocupation: "Software Engineer, Tech Solutions",
         review: "I've been using Company for a few months now and it has really helped me streamline my work.",
-        avatar: "/public/imgs/Home/reviews/Avatar2.png"
+        avatar: "/imgs/Home/reviews/Avatar2.png"
     },
     {
         id: 3,
-        rating:"/public/imgs/Home/reviews/Stars.png",
+        rating:"/imgs/Home/reviews/Stars.png",
         name: "Sarah Johnson",
         ocupation: "UI/UX Designer, Creative Minds",
         review: "Company has been a game changer for our design team. It's made collaboration and iteration so much easier.",
-        avatar: "/public/imgs/Home/reviews/Avatar3.png"
+        avatar: "/imgs/Home/reviews/Avatar3.png"
     },
     {
         id: 4,
-        rating:"/public/imgs/Home/reviews/Stars.png",
+        rating:"/imgs/Home/reviews/Stars.png",
         name: "David Lee",
         ocupation: "Full Stack Developer, Code Wizards",
         review: "I was skeptical at first, but after using Company for a few weeks, I can't imagine going back to our old workflow.",
-        avatar: "/public/imgs/Home/reviews/Avatar4.png"
+        avatar: "/imgs/Home/reviews/Avatar4.png"
     },
     {
         id: 5,
-        rating:"/public/imgs/Home/reviews/Stars.png",
+        rating:"/imgs/Home/reviews/Stars.png",
         name: "Emily Chen",
         ocupation: "Product Manager, Launchpad",
         review: "Company has helped us stay organized and on track with our product development. Highly recommend!",
-        avatar: "/public/imgs/Home/reviews/Avatar5.png"
+        avatar: "/imgs/Home/reviews/Avatar5.png"
     }
 
 ]
@@ -52,7 +52,6 @@ const data = [
 function Review(){
     const [count, setCount] = useState(0)
     const [current, setCurrent] = useState([data[count]])
-    console.log(count)
     useEffect(()=>{
         setCurrent([data[count]])
     },[count])
@@ -108,10 +107,10 @@ function Review(){
             }
             <div className={style.arrows}>
                 <figure>
-                    <img src="/public/imgs/Home/reviews/arrow-left.png" onClick={decrement} alt="" />
+                    <img src="/imgs/Home/reviews/arrow-left.png" onClick={decrement} alt="" />
                 </figure>
                 <figure>
-                    <img src="/public/imgs/Home/reviews/arrow-right.png" onClick={increment} alt="" />
+                    <img src="/imgs/Home/reviews/arrow-right.png" onClick={increment} alt="" />
                 </figure>
             </div>
         </section>
@@ -126,7 +125,7 @@ function Reviews(){
             <Review />
             <section>
                 <figure>
-                    <img src="/public/imgs/Home/reviews/Contents.png" alt="avatars" />
+                    <img src="/imgs/Home/reviews/Contents.png" alt="avatars" />
                 </figure>
             </section>
         </section>

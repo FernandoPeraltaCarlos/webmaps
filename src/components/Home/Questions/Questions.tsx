@@ -77,7 +77,7 @@ function Questions (){
             </section>
             <section className={style.getTouch}>
                 <figure>
-                    <img src="/public/imgs/Home/questions/avatarGroup.png" alt="avatars" />
+                    <img src="/imgs/Home/questions/avatarGroup.png" alt="avatars" />
                 </figure>
                 <h5>Still have questions?</h5>
                 <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
