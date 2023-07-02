@@ -1,0 +1,88 @@
+---
+import style from './style.module.scss';
+
+const data = [
+    {
+        name:"Overview",
+        url:"#"
+    },
+    {
+        name:"Features",
+        url:"#"
+    },
+    {
+        name:"Pricing",
+        url:"#"
+    },
+    {
+        name:"Careers",
+        url:"#"
+    },
+    {
+        name:"Help",
+        url:"#"
+    },
+    {
+        name:"Privacy",
+        url:"#"
+    }
+]
+---
+
+<footer class={style.footer}>
+    <section>
+        <div class={style.logo}>
+            <figure>
+                <img src="/public/imgs/Home/footer/Logo.png" alt="logo">
+            </figure>
+            <p>Get the app</p>
+        </div>
+        <div class={style.app}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div>
+                <figure>
+                    <img src="/public/imgs/Home/footer/iosBadge.svg" alt="ios">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/androidBadge.svg" alt="android">
+                </figure>
+            </div>
+        </div>
+        <div class={style.menu}>
+            <ul>
+                {
+                    data.map(element=>(
+                        <li>
+                            <a href={element.url}>{element.name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class={style.licence}>
+            <p>© 2022 FlexBip. All rights reserved.</p>
+            <div class={style.icon_group}>
+                <figure>
+                    <img src="/public/imgs/Home/footer/twitter.svg" alt="twitter">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/linkedin.svg" alt="linkedin">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/facebook.svg" alt="facebook">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/github.svg" alt="github">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/fingers.svg" alt="fingers">
+                </figure>
+                <figure>
+                    <img src="/public/imgs/Home/footer/ball.svg" alt="ball">
+                </figure>
+            </div>
+        </div>
+    </section>
+</footer>

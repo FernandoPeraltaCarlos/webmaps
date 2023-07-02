@@ -1,0 +1,87 @@
+@import "../../../styles/colors.modules.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    row-gap: 4rem;
+    & > section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.logo {
+    p {
+        color: $white;
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        font-weight: 500;
+    }
+}
+
+.app {
+    p {
+        color: $gray4;
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        font-weight: 400;
+        line-height: 1.5rem;
+        max-width: 20%;
+    }
+    div:has(> figure) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+
+.menu {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        column-gap: 2rem;
+        list-style: none;
+        li {
+            a {
+                text-decoration: none;
+                font-size: clamp(0.8rem, 5vw, 1rem);
+                font-weight: 500;
+                color: $gray4;
+                &:hover {
+                    text-decoration: 2px currentColor underline;
+                }
+            }
+        }
+    }
+}
+
+.licence {
+    padding-top: 2rem;
+    border-top: 1px solid $gray6;
+    p {
+        color: $gray5;
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        font-weight: 400;
+    }
+}
+
+.icon_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}

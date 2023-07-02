@@ -71,7 +71,7 @@ function Questions (){
             <section className={style.asked}>
                 {
                     data.map(question=>(
-                        <Question question={question.question} answer={question.answer} />
+                        <Question key={question.question} question={question.question} answer={question.answer} />
                     ))
                 }
             </section>
