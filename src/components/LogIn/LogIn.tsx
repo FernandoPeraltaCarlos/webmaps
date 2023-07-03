@@ -7,13 +7,13 @@ const users = [
         id:"1",
         user:"example1@example.com",
         pass:"password2",
-        icon:"#"
+        icon:"/imgs/dashboard/user1.png"
     },
     {
         id:"2",
         user:"example2@example.com",
         pass:"password2",
-        icon:"#"
+        icon:"/imgs/dashboard/user2.png"
     },
 ]
 
@@ -38,7 +38,7 @@ function Form(){
 
     useEffect(()=>{
         if(value){
-            console.log("exito")
+            window.location.href = "/dashboard"
         }
     },[value])
 

@@ -1,0 +1,249 @@
+@import "../../styles/colors.modules.scss";
+
+//! Nav
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0 3rem 0;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1rem;
+        &:has(ul) {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                column-gap: 0.25rem;
+                li {
+                    a {
+                        text-decoration: none;
+                        padding: 0.75rem;
+                        font-size: clamp(0.8rem, 5vw, 1rem);
+                        font-weight: 500;
+                        color: $gray7;
+                        border-radius: 8px;
+                        &:hover {
+                            background-color: $blue4;
+                        }
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1rem;
+            figure {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+//! dashboard
+.dashboard {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.75rem;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid $gray2;
+        background-color: $white;
+        padding: 0.625rem 1rem;
+        box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+    & > span {
+        border-radius: 8px;
+        padding: 0.625rem 1rem;
+        background-color: $blue4;
+        border: 1px solid $blue4;
+        color: $blue3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+        & > span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.filter_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    input {
+        padding: 0.625rem 0.875rem;
+        color: $gray;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 8px;
+        border: 1px solid $gray2;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        &:focus {
+            outline: none;
+            border: 1px solid $gray;
+        }
+    }
+    span {
+        border-radius: 8px;
+        padding: 0.625rem 1rem;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        border: 1px solid $blue;
+        background-color: $blue;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $white;
+        &:hover {
+            cursor: pointer;
+            background-color: $darkblue;
+        }
+    }
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.5rem;
+    input {
+        padding: 0.75rem 1rem;
+        color: $gray;
+        font-size: 0.875rem;
+        font-weight: 400;
+        border-radius: 8px;
+        border: 1px solid $gray2;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        &:focus {
+            outline: none;
+            border: 1px solid $gray;
+        }
+    }
+}
+
+//! modal
+.addUser_form {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1.125rem;
+    padding: 1.5rem;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    border-radius: 12px;
+    width: 30%;
+    min-width: 300px;
+    & > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 0.3rem;
+        &:has(> input) {
+            label {
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: $gray7;
+            }
+            input {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                color: $gray;
+                font-size: 0.875rem;
+                font-weight: 400;
+                border-radius: 8px;
+                border: 1px solid $gray2;
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                &:focus {
+                    outline: none;
+                    border: 1px solid $gray;
+                }
+            }
+        }
+        &:has(> p) {
+            h5 {
+                font-size: 1.125rem;
+                font-weight: 500;
+                color: $black;
+            }
+            p {
+                font-size: 0.875rem;
+                font-weight: 400;
+                color: $gray;
+            }
+        }
+    }
+}
+
+.addUser_btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.75rem;
+    button {
+        padding: 0.625rem 1.125rem;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        &:hover {
+            cursor: pointer;
+        }
+        &:first-of-type {
+            color: $black;
+            border: 1px solid var(--gray-300, #d0d5dd);
+            background: var(--base-white, #fff);
+        }
+        &:last-of-type {
+            color: $white;
+            border: 1px solid var(--blue-600, #1570ef);
+            background: var(--blue-600, #1570ef);
+            &:hover {
+                background-color: $darkblue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.userTable {
+    width: 100%;
+    table {
+        width: 100%;
+    }
+}
