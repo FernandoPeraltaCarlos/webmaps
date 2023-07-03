@@ -85,3 +85,47 @@
         }
     }
 }
+
+.img_mobile {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        & > section {
+            width: 100%;
+            &:first-of-type {
+                p {
+                    max-width: 80%;
+                }
+            }
+            &:last-of-type {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .img_desktop {
+        display: none;
+    }
+    .img_mobile {
+        display: flex;
+    }
+    .rating {
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        & > div {
+            width: 100%;
+            &:nth-of-type(3) {
+                grid-area: div3;
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
