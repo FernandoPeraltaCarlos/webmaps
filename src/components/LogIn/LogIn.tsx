@@ -6,7 +6,7 @@ const users = [
     {
         id:"1",
         user:"example1@example.com",
-        pass:"password2",
+        pass:"password1",
         icon:"/imgs/dashboard/user1.png"
     },
     {

@@ -1,3 +1,10 @@
+# Dashbord users
+| User                      | Pass                                             |
+| :------------------------ | :----------------------------------------------- |
+| `example1@example.com`    | password1                                        |
+| `example1@example.com`    | password2                                        |
+
+
 # Astro Starter Kit: Basics
 
 ```
